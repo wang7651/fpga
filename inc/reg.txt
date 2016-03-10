@@ -1,0 +1,408 @@
+AdcRegs 0x40xx,0x41xx,0x42xx
+
+FaultMuxRegs 0x30xx,0x31
+
+LoopMuxRegs 0x20xx,0x21
+
+FeCtrl0Regs 0x80xx,0x81
+FeCtrl1Regs 0xb0xx
+FeCtrl2Regs 0xe0xx
+
+Filter0Regs 0x60xx,0x61xx
+Filter1Regs 0x90xx
+Filter2Regs 0xC0xx
+
+Dpwm0Regs Address 0x50xx,0x51xx
+Dpwm1Regs Address 0x70xx
+Dpwm2Regs Address 0xA0xx
+Dpwm3Regs Address 0xD0xx
+
+
+         //--------------------------modify for ACC, B, PSW, DPL, DPH
+          DPWM0CTRL0_B0 = 16'h518b,Dpwm0Regs
+          DPWM1CTRL0_B0 = 16'h718b,
+          DPWM2CTRL0_B0 = 16'ha18b,
+          DPWM3CTRL0_B0 = 16'hd18b,
+          DPWM0BLKBBEG_B0 = 16'h51db,
+          DPWM1BLKBBEG_B0 = 16'h71db,
+          DPWM2BLKBBEG_B0 = 16'ha1db,
+          DPWM3BLKBBEG_B0 = 16'hd1db,
+          DPWM0ADAPTIVE_B0 = 16'h51eb,
+          DPWM1ADAPTIVE_B0 = 16'h71eb,
+          DPWM2ADAPTIVE_B0 = 16'ha1eb,
+          DPWM3ADAPTIVE_B0 = 16'hd1eb,
+          DPWM0AUTOSWLOUPTHRESH_B0 = 16'h51fb,
+          DPWM1AUTOSWLOUPTHRESH_B0 = 16'h71fb,
+          DPWM2AUTOSWLOUPTHRESH_B0 = 16'ha1fb,
+          DPWM3AUTOSWLOUPTHRESH_B0 = 16'hd1fb,
+
+          DPWM0AUTOMID_B0 = 16'h528b,
+          DPWM1AUTOMID_B0 = 16'h728b,
+          DPWM2AUTOMID_B0 = 16'ha28b,
+          DPWM3AUTOMID_B0 = 16'hd28b,
+          DPWM0EDGEGEN_B0 = 16'h518b,
+          DPWM1EDGEGEN_B0 = 16'h718b,
+          DPWM2EDGEGEN_B0 = 16'ha18b,
+          DPWM3EDGEGEN_B0 = 16'hd18b,
+//******************************************
+
+//**********
+          DPWM0CTRL1_B0 = 16'h5087,
+          DPWM1CTRL1_B0 = 16'h7087,
+          DPWM2CTRL1_B0 = 16'ha087,
+          DPWM3CTRL1_B0 = 16'hd087,
+          DPWM0CTRL2_B0 = 16'h508b,
+          DPWM1CTRL2_B0 = 16'h708b,
+          DPWM2CTRL2_B0 = 16'ha08b,
+          DPWM3CTRL2_B0 = 16'hd08b,
+            DPWM0PRD_B0 = 16'h508f,
+            DPWM1PRD_B0 = 16'h708f,
+            DPWM2PRD_B0 = 16'ha08f,
+            DPWM3PRD_B0 = 16'hd08f,
+            DPWM0EV1_B0 = 16'h5093
+            DPWM1EV1_B0 = 16'h7093,
+            DPWM2EV1_B0 = 16'ha093,
+            DPWM3EV1_B0 = 16'hd093,
+            DPWM0EV2_B0 = 16'h5097,
+            DPWM1EV2_B0 = 16'h7097,
+            DPWM2EV2_B0 = 16'ha097,
+            DPWM3EV2_B0 = 16'hd097,
+            DPWM0EV3_B0 = 16'h509b,
+            DPWM1EV3_B0 = 16'h709b,
+            DPWM2EV3_B0 = 16'ha09b,
+            DPWM3EV3_B0 = 16'hd09b,
+            DPWM0EV4_B0 = 16'h509f,
+            DPWM1EV4_B0 = 16'h709f,
+            DPWM2EV4_B0 = 16'ha09f,
+            DPWM3EV4_B0 = 16'hd09f,
+      DPWM0SAMPTRIG1_B0 = 16'h50a3,
+      DPWM1SAMPTRIG1_B0 = 16'h70a3,
+      DPWM2SAMPTRIG1_B0 = 16'ha0a3,
+      DPWM3SAMPTRIG1_B0 = 16'hd0a3,
+      DPWM0SAMPTRIG2_B0 = 16'h50a7,
+      DPWM1SAMPTRIG2_B0 = 16'h70a7,
+      DPWM2SAMPTRIG2_B0 = 16'ha0a7,
+      DPWM3SAMPTRIG2_B0 = 16'hd0a7,
+      DPWM0PHASETRIG_B0 = 16'h50ab,
+      DPWM1PHASETRIG_B0 = 16'h70ab,
+      DPWM2PHASETRIG_B0 = 16'ha0ab,
+      DPWM3PHASETRIG_B0 = 16'hd0ab,
+        DPWM0CYCADJA_B0 = 16'h50af,
+        DPWM1CYCADJA_B0 = 16'h70af,
+        DPWM2CYCADJA_B0 = 16'ha0af,
+        DPWM3CYCADJA_B0 = 16'hd0af,
+        DPWM0CYCADJB_B0 = 16'h50b3,
+        DPWM1CYCADJB_B0 = 16'h70b3,
+        DPWM2CYCADJB_B0 = 16'ha0b3,
+        DPWM3CYCADJB_B0 = 16'hd0b3,
+        DPWM0RESDUTY_B0 = 16'h50b7,
+        DPWM1RESDUTY_B0 = 16'h70b7,
+        DPWM2RESDUTY_B0 = 16'ha0b7,
+        DPWM3RESDUTY_B0 = 16'hd0b7,
+        DPWM0FLTCTRL_B0 = 16'h50bb,
+        DPWM1FLTCTRL_B0 = 16'h70bb,
+        DPWM2FLTCTRL_B0 = 16'ha0bb,
+        DPWM3FLTCTRL_B0 = 16'hd0bb,
+
+        DPWM0OVERFLOW_B0 = 16'h50bf,
+        DPWM1OVERFLOW_B0 = 16'h70bf,
+        DPWM2OVERFLOW_B0 = 16'ha0bf,
+        DPWM3OVERFLOW_B0 = 16'hd0bf,
+             DPWM0INT_B0 = 16'h50c3,
+             DPWM1INT_B0 = 16'h70c3,
+             DPWM2INT_B0 = 16'ha0c3,
+             DPWM3INT_B0 = 16'hd0c3,
+          DPWM0CNTPRE_B0 = 16'h50c7,
+          DPWM1CNTPRE_B0 = 16'h70c7,
+          DPWM2CNTPRE_B0 = 16'ha0c7,
+          DPWM3CNTPRE_B0 = 16'hd0c7,
+          DPWM0BLKABEG_B0 = 16'h50cb,
+          DPWM1BLKABEG_B0 = 16'h70cb,
+          DPWM2BLKABEG_B0 = 16'ha0cb,
+          DPWM3BLKABEG_B0 = 16'hd0cb,
+
+          DPWM0BLKAEND_B0 = 16'h50cf,
+          DPWM1BLKAEND_B0 = 16'h70cf,
+          DPWM2BLKAEND_B0 = 16'ha0cf,
+          DPWM3BLKAEND_B0 = 16'hd0cf,
+          DPWM0BLKBEND_B0 = 16'h50d7,
+          DPWM1BLKBEND_B0 = 16'h70d7,
+          DPWM2BLKBEND_B0 = 16'ha0d7,
+          DPWM3BLKBEND_B0 = 16'hd0d7,
+          DPWM0MINDUTYHI_B0 = 16'h50db,
+          DPWM1MINDUTYHI_B0 = 16'h70db,
+          DPWM2MINDUTYHI_B0 = 16'ha0db,
+          DPWM3MINDUTYHI_B0 = 16'hd0db,
+          DPWM0MINDUTYLO_B0 = 16'h50df,
+          DPWM1MINDUTYLO_B0 = 16'h70df,
+          DPWM2MINDUTYLO_B0 = 16'ha0df,
+          DPWM3MINDUTYLO_B0 = 16'hd0df,
+          DPWM0FLTSTAT_B0 = 16'h50e7,
+          DPWM1FLTSTAT_B0 = 16'h70e7,
+          DPWM2FLTSTAT_B0 = 16'ha0e7,
+          DPWM3FLTSTAT_B0 = 16'hd0e7,
+          DPWM0AUTOSWHIUPTHRESH_B0 = 16'h50eb,
+          DPWM1AUTOSWHIUPTHRESH_B0 = 16'h70eb,
+          DPWM2AUTOSWHIUPTHRESH_B0 = 16'ha0eb,
+          DPWM3AUTOSWHIUPTHRESH_B0 = 16'hd0eb,
+          DPWM0AUTOSWHILOWTHRESH_B0 = 16'h50ef,
+          DPWM1AUTOSWHILOWTHRESH_B0 = 16'h70ef,
+          DPWM2AUTOSWHILOWTHRESH_B0 = 16'ha0ef,
+          DPWM3AUTOSWHILOWTHRESH_B0 = 16'hd0ef,
+          DPWM0AUTOSWLOLOWTHRESH_B0 = 16'h50f7,
+          DPWM1AUTOSWLOLOWTHRESH_B0 = 16'h70f7,
+          DPWM2AUTOSWLOLOWTHRESH_B0 = 16'ha0f7,
+          DPWM3AUTOSWLOLOWTHRESH_B0 = 16'hd0f7,
+          DPWM0AUTOMAX_B0 = 16'h50fb
+          DPWM1AUTOMAX_B0 = 16'h70fb,
+          DPWM2AUTOMAX_B0 = 16'ha0fb,
+          DPWM3AUTOMAX_B0 = 16'hd0fb,
+          DPWM0FILTERDUTYREAD_B0 = 16'h5187,
+          DPWM1FILTERDUTYREAD_B0 = 16'h7187,
+          DPWM2FILTERDUTYREAD_B0 = 16'ha187,
+          DPWM3FILTERDUTYREAD_B0 = 16'hd187, Dpwm3Regs
+
+          //=====================================
+          //******************************************
+          FILTER0STATUS_B0 = 16'h618b, Filter0Regs
+
+          FILTER1STATUS_B0 = 16'h918b,
+
+          FILTER2STATUS_B0 = 16'hc18b,
+
+          FILTER0YNCLPHI_B0 = 16'h61db,
+          FILTER1YNCLPHI_B0 = 16'h91db,
+          FILTER2YNCLPHI_B0 = 16'hc1db,
+          FILTER0PRESET_B0 = 16'h61eb,
+          FILTER1PRESET_B0 = 16'h91eb,
+          FILTER2PRESET_B0 = 16'hc1eb,
+         //******************************************
+
+
+          FILTER0CTRL_B0 = 16'h6087, Filter0Regs
+          FILTER1CTRL_B0 = 16'h9087,
+          FILTER2CTRL_B0 = 16'hc087,
+          CPUXN0_B0 = 16'h608b,
+          CPUXN1_B0 = 16'h908b,
+          CPUXN2_B0 = 16'hc08b,
+          FILTER0XNREAD_B0 = 16'h608f,
+          FILTER1XNREAD_B0 = 16'h908f,
+          FILTER2XNREAD_B0 = 16'hc08f,
+          FILTER0KIYNREAD_B0 = 16'h6093,
+          FILTER1KIYNREAD_B0 = 16'h9093,
+          FILTER2KIYNREAD_B0 = 16'hc093,
+          FILTER0KDYNREAD_B0 = 16'h6097,
+          FILTER1KDYNREAD_B0 = 16'h9097,
+          FILTER2KDYNREAD_B0 = 16'hc097,
+          FILTER0YNREAD_B0 = 16'h609b,
+          FILTER1YNREAD_B0 = 16'h909b,
+          FILTER2YNREAD_B0 = 16'hc09b,
+          COEFCONFIG0_B0 = 16'h609f,
+          COEFCONFIG1_B0 = 16'h909f,
+          COEFCONFIG2_B0 = 16'hc09f,
+          FILTER0KPCOEF0_B0 = 16'h60a3,Filter0Regs
+          FILTER1KPCOEF0_B0 = 16'h90a3,
+          FILTER2KPCOEF0_B0 = 16'hc0a3,
+          FILTER0KPCOEF1_B0 = 16'h60a7,
+          FILTER1KPCOEF1_B0 = 16'h90a7,
+          FILTER2KPCOEF1_B0 = 16'hc0a7,
+          FILTER0KICOEF0_B0 = 16'h60ab,
+          FILTER1KICOEF0_B0 = 16'h90ab,
+          FILTER2KICOEF0_B0 = 16'hc0ab,
+          FILTER0KICOEF1_B0 = 16'h60af,
+          FILTER1KICOEF1_B0 = 16'h90af,
+          FILTER2KICOEF1_B0 = 16'hc0af,
+          FILTER0KDCOEF0_B0 = 16'h60b3,
+          FILTER1KDCOEF0_B0 = 16'h90b3,
+          FILTER2KDCOEF0_B0 = 16'hc0b3,
+          FILTER0KDCOEF1_B0 = 16'h60b7,
+          FILTER1KDCOEF1_B0 = 16'h90b7,
+          FILTER2KDCOEF1_B0 = 16'hc0b7,
+          FILTER0KDALPHA_B0 = 16'h60bb, Filter0Regs
+          FILTER1KDALPHA_B0 = 16'h90bb,
+          FILTER2KDALPHA_B0 = 16'hc0bb,
+          FILTER0NL0_B0 = 16'h60bf,
+          FILTER1NL0_B0 = 16'h90bf,
+          FILTER2NL0_B0 = 16'hc0bf,
+          FILTER0NL1_B0 = 16'h60c3,
+          FILTER1NL1_B0 = 16'h90c3,
+          FILTER2NL1_B0 = 16'hc0c3,
+          FILTER0NL2_B0 = 16'h60c7,
+          FILTER1NL2_B0 = 16'h90c7,
+          FILTER2NL2_B0 = 16'hc0c7,
+          FILTER0KICLPHI_B0 = 16'h60cb,
+          FILTER1KICLPHI_B0 = 16'h90cb,
+          FILTER2KICLPHI_B0 = 16'hc0cb,
+          FILTER0KICLPLO_B0 = 16'h60cf,
+          FILTER1KICLPLO_B0 = 16'h90cf,
+          FILTER0YNCLPLO_B0 = 16'h60d7,
+          FILTER1YNCLPLO_B0 = 16'h90d7,
+          FILTER2YNCLPLO_B0 = 16'hc0d7,
+          FILTER0OCLPHI_B0 = 16'h60db,
+          FILTER1OCLPHI_B0 = 16'h90db,
+          FILTER2OCLPHI_B0 = 16'hc0db,
+          FILTER0OCLPLO_B0 = 16'h60df,
+          FILTER1OCLPLO_B0 = 16'h90df,s
+          FILTER2OCLPLO_B0 = 16'hc0df, Filter2Regs
+
+////////////////////////////////
+          RAMPCTRL0_B0 = 16'h818b,FeCtrl0Regs
+          RAMPCTRL1_B0 = 16'hb18b,
+          RAMPCTRL2_B0 = 16'he18b,
+          RAMPSTAT0_B0 = 16'h8087,FeCtrl0Regs
+          RAMPSTAT1_B0 = 16'hb087,
+          RAMPSTAT2_B0 = 16'he087,
+          RAMPCYCLE0_B0 = 16'h808b,
+          RAMPCYCLE1_B0 = 16'hb08b,
+          RAMPCYCLE2_B0 = 16'he08b,
+          EADCDAC0_B0 = 16'h808f, FeCtrl0Regs
+          EADCDAC1_B0 = 16'hb08f,
+          EADCDAC2_B0 = 16'he08f,
+          RAMPDACEND0_B0 = 16'h8093,
+          RAMPDACEND1_B0 = 16'hb093,
+          RAMPDACEND2_B0 = 16'he093,
+          DACSTEP0_B0 = 16'h8097,
+          DACSTEP1_B0 = 16'hb097,
+          DACSTEP2_B0 = 16'he097,
+          DACSATSTEP0_B0 = 16'h809b,
+          DACSATSTEP1_B0 = 16'hb09b,
+          DACSATSTEP2_B0 = 16'he09b,
+          EADCCTRL0_B0 = 16'h80a3,    FeCtrl0Regs
+          EADCCTRL1_B0 = 16'hb0a3,
+          EADCCTRL2_B0 = 16'he0a3,
+          SARCTRL0_B0 = 16'h80b3,  FeCtrl0Regs
+          SARCTRL1_B0 = 16'hb0b3,
+          SARCTRL2_B0 = 16'he0b3,
+          EADCVALUE0_B0 = 16'h80bb,
+          EADCVALUE1_B0 = 16'hb0bb,
+          EADCVALUE2_B0 = 16'he0bb,
+          EADCRAWVALUE0_B0 = 16'h80bf,
+          EADCRAWVALUE1_B0 = 16'hb0bf,
+          EADCRAWVALUE2_B0 = 16'he0bf,
+          DACSTAT0_B0 = 16'h80c3,
+          DACSTAT1_B0 = 16'hb0c3,
+          DACSTAT2_B0 = 16'he0c3, FeCtrl2Regs
+
+//--------------------------------------------------------
+          //******************************************
+          FECTRL0MUX_B0 = 16'h218b, LoopMuxRegs
+          GLBEN_B0 = 16'h21db, LoopMuxRegs
+          LLENTHRESH_B0  = 16'h21eb,
+         //******************************************
+          FECTRL1MUX_B0 = 16'h2087, LoopMuxRegs
+          FECTRL2MUX_B0 = 16'h208b,
+          EXTDACCTRL_B0 = 16'h2093,
+          FILTERMUX_B0 = 16'h2097,
+          FILTERKCOMPA_B0 = 16'h209b,
+          FILTERKCOMPB_B0 = 16'h209f,
+          DPWMMUX_B0 = 16'h20a3, LoopMuxRegs
+          PWMGLBPRD_B0 = 16'h20d7,
+          SYNCCTRL_B0 = 16'h20db,
+          PCMCTRL_B0 = 16'h20eb,
+          SAMPTRIGCTRL_B0 = 16'h208f, LoopMuxRegs
+          CYCADJCTRL_B0 = 16'h20c7,
+          CYCADJLIM_B0  = 16'h20cb,
+          CYCADJSTAT_B0  = 16'h20cf,
+          LLCTRL_B0  = 16'h20df,
+          LLDISTHRESH_B0  = 16'h20e7, LoopMuxRegs
+//--------------------------------------------------------
+         //********************************
+
+          IDECTRL_B0  = 16'h428b, FaultMuxRegs
+          DPWM0CLIM_B0  = 16'h30b7, FaultMuxRegs
+          DPWM0FLTABDET_B0  = 16'h30bb,
+          DPWM0FLTDET_B0  = 16'h30bf,
+          DPWM1CLIM_B0  = 16'h30c7,
+          DPWM1FLTABDET_B0  = 16'h30cb,
+          DPWM1FLTDET_B0  = 16'h30cf,
+          DPWM2CLIM_B0  = 16'h30d7,
+          DPWM2FLTABDET_B0  = 16'h30db,
+          DPWM2FLTDET_B0  = 16'h30df,
+          DPWM3CLIM_B0  = 16'h30e7,
+          DPWM3FLTABDET_B0  = 16'h30eb,
+          DPWM3FLTDET_B0  = 16'h30ef,
+          ACOMPCTRL0_B0 = 16'h318b,
+          EXTFAULTCTRL_B0  = 16'h3093, FaultMuxRegs
+          FAULTMXINTSTAT_B0  = 16'h3097,
+          FAULTMXRAWSTAT_B0  = 16'h309b,
+          DCOMPCTRL0_B0  = 16'h30a3,
+          DCOMPCTRL1_B0  = 16'h30a7,
+          DCOMPCTRL2_B0  = 16'h30ab,
+          DCOMPCTRL3_B0  = 16'h30af,
+          DCOMPCNTSTAT_B0  = 16'h30b3,
+
+          ACOMPCTRL1_B0 = 16'h3087,
+          ACOMPCTRL2_B0 = 16'h308b,
+          ACOMPCTRL3_B0 = 16'h308f,
+          COMPRAMP0_B0  = 16'h309f, FaultMuxRegs
+
+          //--------------------------------------------------------
+
+         //******************************************
+          ADCCTRL_B0  = 16'h41a3, AdcRegs
+          ADCRESULT13_B0  = 16'h41db,
+          ADCAVGRESULT1_B0  = 16'h41eb,
+          ADCAVGRESULT5_B0  = 16'h41fb,
+          
+          ADCSTAT_B0  = 16'h4087, AdcRegs
+          ADCSEQSEL0_B0  = 16'h408f,
+          ADCSEQSEL1_B0  = 16'h4093,
+          ADCSEQSEL2_B0  = 16'h4097,
+          ADCSEQSEL3_B0  = 16'h409b,
+          ADCRESULT0_B0  = 16'h409f,
+          ADCRESULT1_B0  = 16'h40a3,
+          ADCRESULT2_B0  = 16'h40a7,
+          ADCRESULT3_B0  = 16'h40ab,
+          ADCRESULT4_B0  = 16'h40af,
+          ADCRESULT5_B0  = 16'h40b3,
+          ADCRESULT7_B0  = 16'h40bb,
+          ADCRESULT8_B0  = 16'h40bf,
+          ADCRESULT9_B0  = 16'h40c3,
+          ADCRESULT10_B0  = 16'h40c7,
+          ADCRESULT11_B0  = 16'h40cb,
+          ADCRESULT12_B0  = 16'h40cf,
+          ADCRESULT14_B0  = 16'h40d7,
+          ADCRESULT15_B0  = 16'h40db,
+          ADCAVGRESULT0_B0  = 16'h40df,
+          ADCAVGRESULT2_B0  = 16'h40e7,
+          ADCAVGRESULT3_B0  = 16'h40eb,
+          ADCAVGRESULT4_B0  = 16'h40ef,
+          ADCCOMPLIM0_B0  = 16'h40f7,
+          ADCCOMPLIM1_B0  = 16'h40fb,
+   //     ADCCOMPLIM2_B0  = 16'h4off,
+          ADCCOMPLIM2_B0  = 16'h419b,
+		  ADCCOMPLIM3_B0  = 16'h428f,
+          ADCCOMPLIM4_B0  = 16'h4187,
+          ADCCOMPLIM5_B0  = 16'h418b,
+          ADCCOMPEN_B0 = 16'h418f,
+          ADCCOMPRESULT_B0 = 16'h4193,
+          ADCAVGCTRL_B0 = 16'h4197, AdcRegs
+
+          SC0CTRL0_B0 = 16'h5893, unknow
+          SC1CTRL0_B0 = 16'h7893,
+          SC2CTRL0_B0 = 16'ha893,
+          SC3CTRL0_B0 = 16'hd893,
+          OC1CTRL0_B0 = 16'h7897,
+          OC2CTRL0_B0 = 16'ha897,
+          OC3CTRL0_B0 = 16'hd897,
+
+          DPWM0FLTABDETEXT_B0 = 16'h598b,
+          DPWM1FLTABDETEXT_B0 = 16'h798b,
+          DPWM2FLTABDETEXT_B0 = 16'ha98b,
+          DPWM3FLTABDETEXT_B0 = 16'hd98b,
+          DPWM0FLTADETEXT_B0 = 16'h5887,
+          DPWM1FLTADETEXT_B0 = 16'h7887,
+          DPWM2FLTADETEXT_B0 = 16'ha887,
+          DPWM3FLTADETEXT_B0 = 16'hd887,
+          DPWM1FLTBDETEXT_B0 = 16'h788b,
+          DPWM2FLTBDETEXT_B0 = 16'ha88b,
+          DPWM3FLTBDETEXT_B0 = 16'hd88b,
+          //=====================================this block not appear in UCD3138 doc
+          DPWM0ADCPDREF_B0 = 16'h519f,
+          DPWM1ADCPDREF_B0 = 16'h719f,
+          DPWM2ADCPDREF_B0 = 16'ha19f,
+          DPWM3ADCPDREF_B0 = 16'hd19f,
+          DPWM0ADCPDIS_B0 = 16'h51a7,
+          DPWM1ADCPDIS_B0 = 16'h71a7,
+          DPWM2ADCPDIS_B0 = 16'ha1a7,
+          DPWM3ADCPDIS_B0 = 16'hd1a7,
