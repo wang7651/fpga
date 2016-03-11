@@ -1,3 +1,4 @@
+//while (1){P0=P1=P2=P3 = sum++;}
 /*
 DPWM0CTRL0.bit.CLA_EN = 1; dpwm can't work
 SAMPTRIGCTRL.bit.FE0_TRIG_DPWM0_EN = 1 dpwm can't work
